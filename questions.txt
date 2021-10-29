@@ -10,7 +10,7 @@ chapter 1 passage 13  question type: factual  ans: golden key
 4. Who was splendidly dressed and carrying a pair of white kid gloves in one hand and a large fan in the other
 chapter 2 ans: white rabbit
 
-5.Who was afraid f being drowned in own tears
+5.Who was afraid of being drowned in own tears
 chapter 2 ans: alice
 
 6 What did Alice pull out of her pocket as prizes?
