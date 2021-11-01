@@ -122,8 +122,8 @@ def answer_question(question, answer_text):
 		
 		return (answer,start_scores[0][answer_start], end_scores[0][answer_end])
 
-
 from tqdm import tqdm
+from collections import Counter
 
 def query(question,n_sent=3):
 		outputs=[]
@@ -141,15 +141,18 @@ def query(question,n_sent=3):
 						ans =  2*(output[1]*output[2])/(output[1]+output[2])
 						ans_text = output[0]
 		outputs.sort(key=lambda x:x[1],reverse =True)
-		freq = defaultdict(int)
+		# freq = defaultdict(int)
 		# print('Top 10',outputs[:10])
+		cnt = Counter()
 		for output in outputs[:10]:
-			freq[output[0]]+=1
+			# freq[output[0]]+=1
+			cnt[output[0]]+=1
 		# freq.sort(key=lambda x:x[])
-		sorted(freq.items(), key=lambda item: item[1],reverse=True)
-		print(freq)
-		return ans_text
-
+		# sorted(freq.items(), key=lambda item: item[1],reverse=True)
+		# print(freq)
+		# print(cnt)
+		# return ans_text
+		return cnt.most_common()[0][0]
 
 questions = open('question_list.txt','r').readlines()
 
