@@ -104,7 +104,7 @@ def answer_question(question, answer_text, model, tokenizer):
     return (answer, start_scores[0][answer_start], end_scores[0][answer_end])
 
 
-def query(question, text_sent, model, tokenizer, n_sent=3):
+def query(question, text_sent, model, tokenizer, n_sent=1):
     outputs = []
     sent_count = len(text_sent)
     ans = 0
@@ -168,5 +168,6 @@ def traditional():
         print(question)
         print(ans,max_cos,'\n')
     # print(sentence_vectors.toarr)
-traditional()
+# traditional()
+modern()
 
