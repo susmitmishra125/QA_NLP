@@ -148,5 +148,7 @@ def traditional():
         print(question)
         print(ans,'\n')
     # print(sentence_vectors.toarr)
-# traditional()
+print("Starting for modern method")
 modern()
+print("Starting for traditional method")
+traditional()
