@@ -62,7 +62,6 @@ def answer_question(question, answer_text, model, tokenizer):
     answer. Prints them out.
     '''
     input_ids = tokenizer.encode(question, answer_text)
-.
     sep_index = input_ids.index(tokenizer.sep_token_id)
     num_seg_a = sep_index + 1
     num_seg_b = len(input_ids) - num_seg_a
@@ -147,7 +146,7 @@ def traditional():
                 ans = text_sent[i]
                 max_cos = cos_sim
         print(question)
-        print(ans,max_cos,'\n')
+        print(ans,'\n')
     # print(sentence_vectors.toarr)
 # traditional()
 modern()
